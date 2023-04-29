@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
+const db = require('./config/connection');
 const routes = require('./routes');
 const { ApolloServer } = require('apollo-server-express');
 const { authMiddleware } = require('./utils/auth');
 
-const resolvers = require('./schema/resolvers');
-const typeDefs = require('./schema/typeDefs');
-const db = require('./config/connection');
+const { typeDefs, resolvers } = require('./schema');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -25,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 app.use(routes);
