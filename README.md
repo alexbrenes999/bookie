@@ -42,6 +42,12 @@ THEN that book is deleted from my saved books list
 WHEN I click on the Logout button
 THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 ```
+## Demo
+
+![image](https://user-images.githubusercontent.com/116224156/235358223-c266f389-0d45-4773-b879-ec2a69e4a2a3.png)
+
+![image](https://user-images.githubusercontent.com/116224156/235358300-fcc03d9c-842e-4f47-bc65-1b206ce98096.png)
+
 ## Deployed 
 
 https://booksyorbooksieidk.herokuapp.com/
